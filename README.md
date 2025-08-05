@@ -20,6 +20,11 @@ The application is built using the Grails framework and uses domain driven desig
    ```bash
    grails run-app
    ```
+   Cleaning it helps a lot
+
+  ```bash
+   grails clean
+   ```
 
 3. Open your browser and go to:
    ```
@@ -38,7 +43,7 @@ The application is built using the Grails framework and uses domain driven desig
 ## Code Structure
 
 - `grails-app/domain/expensesheet/ExpenseUser.groovy`: Stores the user's name and starting balance (ZAR).
-- `grails-app/domain/expensesheet/Transaction.groovy`: Stores expense amount, description, and timestamps.
+- `grails-app/domain/expensesheet/Transaction.groovy`: Stores expense amount, description and timestamps.
 - `grails-app/services/expensesheet/CurrencyConversionService.groovy`: Handles ZAR to USD currency conversion using Fixer.io.
 - `grails-app/controllers/expensesheet/ExpenseUserController.groovy`: Manages user creation and updates.
 - `grails-app/controllers/expensesheet/TransactionController.groovy`: Manages expense entries and CSV export.
@@ -51,3 +56,4 @@ The application is built using the Grails framework and uses domain driven desig
 - Implement caching for exchange rates using Redis or similar.
 - More pagination
 - Deploy to cloud services like AWS
+- Better handling e.g user makes a transaction that puts their balance in negative, user edits the balance, user makes another     transaction but it stays in the negatives. This must be improved. 
