@@ -20,7 +20,7 @@ The application is built using the Grails framework and uses domain driven desig
    ```bash
    grails run-app
    ```
-   Cleaning it helps a lot
+   Cleaning it: 
 
   ```bash
    grails clean
