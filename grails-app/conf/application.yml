@@ -1,0 +1,36 @@
+grails:
+    profile: web
+    codegen:
+        defaultPackage: expensesheet
+    gorm:
+        failOnError: true
+    controllers:
+        defaultScope: prototype
+
+# API key for Fixer.io currency conversion
+fixer:
+    apiKey: '57b757924fc093ed310613d8c012a65c'
+
+# DataSource configuration
+dataSource:
+    pooled: true
+    jmxExport: true
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+    dbCreate: update
+    url: jdbc:h2:mem:devDb;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+
+environments:
+    development:
+        dataSource:
+            dbCreate: update
+            url: jdbc:h2:mem:devDb;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+    test:
+        dataSource:
+            dbCreate: update
+            url: jdbc:h2:mem:testDb;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+    production:
+        dataSource:
+            dbCreate: update
+            url: jdbc:h2:./prodDb;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
