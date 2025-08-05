@@ -12,7 +12,7 @@ The application is built using the Grails framework and uses domain driven desig
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/expense-sheet-system.git
+   git clone https://github.com/yyydissaK/my-expense-tracker.git
    cd expense-sheet-system
    ```
 
